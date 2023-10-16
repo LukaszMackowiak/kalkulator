@@ -1,22 +1,68 @@
-div {
-  display: grid;
-  grid-template-columns: 6% 6% 6%;
-  grid-template-rows: 6% 6% 6%;
+button {
+  box-sizing: border-box;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #b1b1b1;
+  background-color: #292929;
+  outline: none;
+}
+
+header {
+  font-family:'Courier New', Courier, monospace;
+  color: white;
   text-align: center;
 }
 
 body {
-  text-align: center;
-  background-color: rgb(211, 211, 211);
+  padding: 0;
+  margin: 0;
+  background-color: #1b1b1b;
 }
 
-button {
-  background-color: rgb(101, 103, 255);
-  color: rgb(241, 241, 241);
-  height: 60px;
-  width: 60px;
+.kalkulator {
+  margin: 25px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+  min-height: 70%;
 }
 
-header {
-  height: 10%;
+.wynik {
+  grid-column: 1 / -1;
+  background-color: #292929;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: white;
+  padding: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.poprzednie {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fcfcfc;
+}
+
+.aktualne {
+  font-size: 30px;
+}
+
+.kol3 {
+  grid-column: span 3;
+}
+
+.row2 {
+  grid-row: span 2;
+}
+
+.kol2 {
+  grid-column: span 2;
 }
